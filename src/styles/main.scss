@@ -1,4 +1,38 @@
 #quiz_block {
     margin-top: 20px;
     background-color: #edf4f5;
+    min-height: 400px;
+}
+
+h1 {
+    color: #054950;
+    text-align: center;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+}
+
+.quiz-button {
+    min-width: 150px;
+    max-width: 250px;
+    color: #789A9F;
+    background-color: #edf4f5;
+    border: 2px solid #789A9F;
+    margin: 1em;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .2s;
+    &:hover {
+        background-color: #789A9F;
+        color: #edf4f5;
+    }
+}
+
+#quiz_questions {
+    display: none;
+}
+
+.quiz-answer {
+    display: inline-block;
+    margin-right: 50px;
 }
