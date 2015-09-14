@@ -1,20 +1,24 @@
 {
-  "name": "quiz",
-  "version": "0.1.0",
-  "authors": [
-    "macondele <marcus@betraktel.se>"
-  ],
-  "description": "quiz engine",
-  "keywords": [
-    "js",
-    "quiz"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "name": "quiz",
+    "version": "0.1.0",
+    "authors": [
+        "macondele <marcus@betraktel.se>"
+    ],
+    "description": "quiz engine",
+    "keywords": [
+        "js",
+        "quiz"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "jquery": "*",
+        "bootstrap": "*"
+    }
 }
