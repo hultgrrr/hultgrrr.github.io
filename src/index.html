@@ -2,28 +2,32 @@
 <html lang="en">
 
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
     <title>Quiz Engine</title>
     <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.createjs.com/soundjs-0.6.1.min.js"></script>
 </head>
 
 <body>
-    <div class="container" id="quiz_block">
+    <div id="quiz_header">
         <h1>Quiz Engine</h1>
-
         <div id="quiz_intro">
             <p>Hello there and welcome to this fine establishment</p>
             <button type="button" class="quiz-button" id="quiz_start">CALL TO ARMS</button>
         </div>
-
+    </div>
+    <div class="container" id="quiz_block">
+        <div id="quiz_block_panel">
+            <h4>QUESTION 1 OF 2</h4>
+        </div>
         <div id="quiz_questions">
             <div class="quiz_question">
                 Hi there
             </div>
         </div>
     </div>
-
     <script src="assets/jquery/dist/jquery.min.js"></script>
     <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="scripts/app.js"></script>

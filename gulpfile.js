@@ -6,8 +6,7 @@ var sass = require('gulp-sass');
 gulp.task('styles', function() {
     gulp.src('src/styles/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('src/css'))
-        .pipe(plugins.livereload());
+        .pipe(gulp.dest('src/css'));
 });
 
 gulp.task('watch', function() {

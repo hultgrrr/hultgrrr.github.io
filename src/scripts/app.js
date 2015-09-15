@@ -2,6 +2,8 @@ $(document).ready(function() {
     var questions = [];
     var questionsBlock = $('#quiz_questions');
 
+    createjs.Sound.registerSound("assets/sounds/thunder.mp3", 1);
+
     $.getJSON("questions.json", function(json) {
         questions = json;
 
@@ -34,9 +36,11 @@ $(document).ready(function() {
 
         // start quiz on user click
         $('#quiz_start').click(function () {
-
+            createjs.Sound.play(1);
             // fade out intro text
             $('#quiz_intro').fadeOut(function () {
+                createjs.Sound.stop(1);
+
                 // fade in the questions
                 questionsBlock.fadeIn();
             });
