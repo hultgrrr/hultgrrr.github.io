@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "title": "First Question Hype!",
+        "title": "First Question Hypeöälå!",
         "answers": [
-            {"id": 1, "text": "Answer Nr Uno"},
+            {"id": 1, "text": "Answer Nr Uno", "isCorrect": true},
             {"id": 2, "text": "Answer Nr Dos"},
             {"id": 3, "text": "Answer Nr Tres"},
             {"id": 4, "text": "Answer Nr Cuattro"}
@@ -13,7 +13,17 @@
         "id": 2,
         "title": "Second Q Br0!",
         "answers": [
-            {"id": 1, "text": "Answer Nr Uno"},
+            {"id": 1, "text": "Answer Nr Uno", "isCorrect": true},
+            {"id": 2, "text": "Answer Nr Dos"},
+            {"id": 3, "text": "Answer Nr Tres"},
+            {"id": 4, "text": "Answer Nr Cuattro"}
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Third Q Br0!",
+        "answers": [
+            {"id": 1, "text": "Answer Nr Uno", "isCorrect": true},
             {"id": 2, "text": "Answer Nr Dos"},
             {"id": 3, "text": "Answer Nr Tres"},
             {"id": 4, "text": "Answer Nr Cuattro"}
