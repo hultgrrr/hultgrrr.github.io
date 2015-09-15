@@ -52,7 +52,7 @@ $(document).ready(function() {
         }
 
         quiz.atQuestion = number;
-        $('#quiz_block_panel h4').innerHTML = 'QUESTION '+number+' OF '+quiz.questions.length;
+        $('#quiz_block_panel h4')[0].innerHTML = 'QUESTION '+number+' OF '+quiz.questions.length;
         $('.quiz-question').map(function(idx) {
             // ++ cuz of zero index
             if (++idx != number) {
