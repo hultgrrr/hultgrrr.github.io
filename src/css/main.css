@@ -47,7 +47,7 @@ body {
     background-color: #789A9F;
     color: #edf4f5; }
 
-#quiz_questions {
+#quiz_block {
   display: none; }
 
 .quiz-answer {
