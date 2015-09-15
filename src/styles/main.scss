@@ -86,3 +86,14 @@ body {
     display: inline-block;
     margin-right: 50px;
 }
+
+#quiz_timeline {
+    height: 2px;
+    background-color: darken(#FFF, 5);
+}
+
+#quiz_done_timeline {
+    width: 0%;
+    height: 2px;
+    background-color: darken(#FFF, 25);
+}

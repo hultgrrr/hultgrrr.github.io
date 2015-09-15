@@ -5,7 +5,6 @@ Quiz Engine Hype
 - linje över hur långt man kommit grafiskt
 - fixa knapparna
 - fixa finish-procedur
-- rätta question length text
 - github tutorial för att lägga till frågor
 - best practice css
 - minify via gulp

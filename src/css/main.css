@@ -71,3 +71,12 @@ body {
 .quiz-answer {
   display: inline-block;
   margin-right: 50px; }
+
+#quiz_timeline {
+  height: 2px;
+  background-color: #f2f2f2; }
+
+#quiz_done_timeline {
+  width: 0%;
+  height: 2px;
+  background-color: #bfbfbf; }

@@ -1,9 +1,10 @@
 $(document).ready(function() {
     var quiz = {};
     quiz.questions = [];
-    quiz.atQuestion = undefined;
+    quiz.atQuestion = 0;
     quiz.quizBlock = $('#quiz_block');
     quiz.questionsBlock = $('#quiz_questions');
+    quiz.correctAnswers = 0;
     quiz.loadSounds = function() {
         createjs.Sound.registerSound("assets/sounds/thunder.mp3", 1);
     };
@@ -48,10 +49,12 @@ $(document).ready(function() {
     quiz.goToQuestion = function(number) {
         // if we try to navigate to a question out of bounds
         if (number == quiz.questions.length+1) {
-            finishQuiz();
+            quiz.finishQuiz();
+            return;
         }
 
         quiz.atQuestion = number;
+        quiz.setTimeline();
         $('#quiz_block_panel h4')[0].innerHTML = 'QUESTION '+number+' OF '+quiz.questions.length;
         $('.quiz-question').map(function(idx) {
             // ++ cuz of zero index
@@ -62,13 +65,27 @@ $(document).ready(function() {
             }
         });
     };
+    quiz.setTimeline = function (end) {
+        end = end || false;
+        if (quiz.atQuestion == 1) {
+            return;
+        }
+
+        var calcWidth = ((quiz.atQuestion-1)/quiz.questions.length)*100;
+        $('#quiz_done_timeline').css('width', calcWidth+'%');
+
+        if (end) {
+            $('#quiz_done_timeline').css('background-color', '#F78F1E');
+        }
+    };
     quiz.checkAnswer = function (element) {
         // the element name holds the answerId
         var answerId = $(element).attr('name');
 
         if (quiz.questions[quiz.atQuestion-1].answers[answerId].isCorrect) {
-            //correct answer!
+            //correct answer
             $(element).find('.quiz-button').addClass('quiz-button-correct');
+            quiz.correctAnswers++;
         } else {
             $(element).find('.quiz-button').addClass('quiz-button-incorrect');
         }
@@ -77,9 +94,10 @@ $(document).ready(function() {
             quiz.goToQuestion(++quiz.atQuestion);
         }, 1000);
     };
-
-
-
+    quiz.finishQuiz = function () {
+        $('#quiz_block_panel h4')[0].innerHTML = 'YOU ARE DONE';
+        quiz.setTimeline(true);
+    };
 
     quiz.loadQuestions();
     quiz.loadSounds();
