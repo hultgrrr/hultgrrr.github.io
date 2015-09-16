@@ -45,6 +45,7 @@ body {
     border: 1px solid lighten(#789A9F, 20);
     border-radius: 3px;
     padding: 1em 2em;
+    margin: 1em;
     text-transform: uppercase;
     transition: .08s;
     &:hover {
@@ -77,6 +78,7 @@ body {
 
 .quiz-button-all-in, .quiz-button-go-home {
     width: 130px;
+    margin: 0;
 }
 
 #quiz_block {

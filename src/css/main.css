@@ -39,6 +39,7 @@ body {
   border: 1px solid #b4c7c9;
   border-radius: 3px;
   padding: 1em 2em;
+  margin: 1em;
   text-transform: uppercase;
   transition: .08s; }
   .quiz-button:hover {
@@ -63,7 +64,8 @@ body {
     background-color: #d05649; }
 
 .quiz-button-all-in, .quiz-button-go-home {
-  width: 130px; }
+  width: 130px;
+  margin: 0; }
 
 #quiz_block {
   display: none; }

@@ -48,8 +48,8 @@ $(document).ready(function() {
             });
 
             //debugging
-            quiz.correctAnswers = 0;
-            quiz.goToQuestion(4);
+            // quiz.correctAnswers = 0;
+            // quiz.goToQuestion(4);
 
         });
     };
@@ -157,33 +157,52 @@ $(document).ready(function() {
     };
     quiz.init = function(reset) {
         quiz.processingAnswer = false;
-        quiz.questions = [];
+        quiz.questions = quiz.questions || [];
         quiz.atQuestion = 0;
         quiz.quizBlock = $('#quiz_block');
         quiz.questionsBlock = $('#quiz_questions');
         quiz.correctAnswers = 0;
 
-        quiz.loadQuestions();
-        quiz.loadSounds();
-        quiz.loadChart();
+        if (!reset) {
+            quiz.loadQuestions();
+            quiz.loadSounds();
+            quiz.loadChart();
+        }
+
     };
     quiz.reset = function() {
-        //quiz.reshuffle();
+        quiz.init(reset = true);
+        createjs.Sound.stop(1);
+        createjs.Sound.stop(2);
+        createjs.Sound.stop(3);
+        createjs.Sound.stop(4);
+        quiz.resetButtonStates();
+        quiz.goToQuestion(1);
+        $('#quiz_finish').hide();
+        $('#quiz_questions').fadeIn();
     };
+    quiz.resetButtonStates = function () {
+        $('.quiz-button-correct').map(function () {
+            $(this).attr('class', 'quiz-button');
+        });
+
+        $('.quiz-button-incorrect').map(function () {
+            $(this).attr('class', 'quiz-button');
+        });
+    };
+
 
 
     // debugging
-    quiz.init();
-    $('#quiz_intro').fadeOut();
-    quiz.quizBlock.fadeIn();
+    // quiz.init();
+    // $('#quiz_intro').fadeOut();
+    // quiz.quizBlock.fadeIn();
 
     // start quiz on user click
     $('#quiz_start').click(function() {
-        createjs.Sound.play(1);
+        quiz.init();
         // fade out intro text
         $('#quiz_intro').fadeOut(function() {
-            createjs.Sound.stop(1);
-
             // fade in the questions
             quiz.goToQuestion(1);
             quiz.quizBlock.fadeIn();
