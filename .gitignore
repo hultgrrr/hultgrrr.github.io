@@ -1,2 +1,4 @@
 src/assets
 src/css
+node_modules
+dist
