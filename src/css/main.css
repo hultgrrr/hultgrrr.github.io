@@ -48,8 +48,8 @@ body {
   .quiz-button:hover {
     background-color: #789A9F;
     color: #edf4f5; }
-  .quiz-button:focused {
-    border: 0; }
+  .quiz-button:focus, .quiz-button:active {
+    outline: none; }
 
 .quiz-button-correct {
   background-color: #229954;

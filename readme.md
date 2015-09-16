@@ -6,7 +6,6 @@ Quiz Engine Hype
 - fixa finish-procedur
 - github tutorial för att lägga till frågor
 - all sounds
-- ignore spam on buttons
 - minify via gulp
 - sass
 - vendor.js hash ETc

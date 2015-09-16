@@ -55,8 +55,8 @@ body {
         background-color: #789A9F;
         color: #edf4f5;
     }
-    &:focused {
-        border: 0;
+    &:focus, &:active {
+        outline: none;
     }
 }
 
