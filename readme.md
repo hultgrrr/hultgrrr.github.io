@@ -2,7 +2,6 @@ Quiz Engine Hype
 ====================
 
 ## Todo
-- fixa knapparna
 - fixa finish-procedur
 - github tutorial för att lägga till frågor
 - all sounds

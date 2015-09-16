@@ -34,8 +34,8 @@ body {
     font-family: 'Montserrat'; }
 
 .quiz-button {
-  min-width: 150px;
   max-width: 250px;
+  min-width: 250px;
   color: #789A9F;
   background-color: #edf4f5;
   border: 1px solid #b4c7c9;
@@ -69,8 +69,7 @@ body {
   display: none; }
 
 .quiz-answer {
-  display: inline-block;
-  margin-right: 50px; }
+  text-align: center; }
 
 #quiz_timeline {
   height: 2px;
@@ -80,3 +79,6 @@ body {
   width: 0%;
   height: 2px;
   background-color: #bfbfbf; }
+
+.container {
+  max-width: 720px; }

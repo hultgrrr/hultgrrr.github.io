@@ -23,9 +23,9 @@ $(document).ready(function() {
                     node.append($('<h3>').text(question.title));
 
                     // loop through answers and set the element up
-                    var answersBlock = $('<div>').addClass('quiz-answers');
+                    var answersBlock = $('<div>').addClass('row').addClass('quiz-answers');
                     $.each(question.answers, function(idx, answer) {
-                        var answerDiv = $('<div>').addClass('quiz-answer').attr('name', idx);
+                        var answerDiv = $('<div>').addClass('col-sm-6').addClass('quiz-answer').attr('name', idx);
                         answerDiv.append($('<button>').addClass('quiz-button').text(answer.text));
                         answersBlock.append(answerDiv);
                     });
