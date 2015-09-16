@@ -1,24 +1,28 @@
 {
-    "name": "quiz",
-    "version": "0.1.0",
-    "authors": [
-        "macondele <marcus@betraktel.se>"
-    ],
-    "description": "quiz engine",
-    "keywords": [
-        "js",
-        "quiz"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "devDependencies": {
-        "jquery": "*",
-        "bootstrap": "*"
-    }
+  "name": "quiz",
+  "version": "0.1.0",
+  "authors": [
+    "macondele <marcus@betraktel.se>"
+  ],
+  "description": "quiz engine",
+  "keywords": [
+    "js",
+    "quiz"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "*",
+    "bootstrap": "*"
+  },
+  "dependencies": {
+    "jquery.easy-pie-chart": "~2.1.6",
+    "SoundJS": "createjs-soundjs#~0.6.1"
+  }
 }

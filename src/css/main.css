@@ -1,19 +1,20 @@
 body {
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  font-family: 'Montserrat'; }
 
 #quiz_header {
   background-color: #eeeeee;
   text-align: center;
   padding: 100px 0 45px 0; }
+  #quiz_header p {
+    font-family: sans-serif; }
   #quiz_header h1 {
     color: #054950;
     text-transform: uppercase;
-    font-family: 'Montserrat';
     margin-top: 0px;
     padding-bottom: 25px; }
 
 #quiz_block_panel {
-  font-family: 'Montserrat';
   margin-top: -30px;
   background: #fcfcfc;
   border-color: #ebebeb;
@@ -24,31 +25,27 @@ body {
   padding: 2px 25px;
   color: #054950; }
 
-#quiz_questions {
+#quiz_content {
   background-color: #fff;
   min-height: 200px;
-  padding: 25px 25px;
+  padding: 10px 25px 10px 25px;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
-  #quiz_questions .quiz-question {
-    font-family: 'Montserrat'; }
 
 .quiz-button {
-  max-width: 250px;
-  min-width: 250px;
+  width: 250px;
   color: #789A9F;
   background-color: #edf4f5;
   border: 1px solid #b4c7c9;
   border-radius: 3px;
-  margin: 1em;
   padding: 1em 2em;
   text-transform: uppercase;
-  font-family: 'Montserrat';
   transition: .08s; }
   .quiz-button:hover {
     background-color: #789A9F;
     color: #edf4f5; }
-  .quiz-button:focus, .quiz-button:active {
+  .quiz-button:focus,
+  .quiz-button:active {
     outline: none; }
 
 .quiz-button-correct {
@@ -65,6 +62,9 @@ body {
   .quiz-button-incorrect:hover {
     background-color: #d05649; }
 
+.quiz-button-all-in, .quiz-button-go-home {
+  width: 130px; }
+
 #quiz_block {
   display: none; }
 
@@ -80,5 +80,38 @@ body {
   height: 2px;
   background-color: #bfbfbf; }
 
+#quiz_finish {
+  display: none; }
+  #quiz_finish p {
+    font-family: sans-serif; }
+
 .container {
   max-width: 720px; }
+
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 110px;
+  font-size: 20px; }
+
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.percent {
+  display: inline-block;
+  z-index: 2; }
+
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em; }
+
+.quiz-result-chart {
+  text-align: center; }

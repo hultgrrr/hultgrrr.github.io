@@ -2,12 +2,13 @@ Quiz Engine Hype
 ====================
 
 ## Todo
-- fixa finish-procedur
+-
 - github tutorial för att lägga till frågor
-- all sounds
 - minify via gulp
 - sass
 - vendor.js hash ETc
+- redo quiz
+- shuffle questions, USED-pool
 
 ## How to get started
 Npm install

@@ -1,22 +1,24 @@
 body {
     background-color: #f7f7f7;
+    font-family: 'Montserrat';
 }
 
 #quiz_header {
     background-color: rgb(238, 238, 238);
     text-align: center;
     padding: 100px 0 45px 0;
+    p {
+        font-family: sans-serif;
+    }
     h1 {
         color: #054950;
         text-transform: uppercase;
-        font-family: 'Montserrat';
         margin-top: 0px;
         padding-bottom: 25px;
     }
 }
 
 #quiz_block_panel {
-    font-family: 'Montserrat';
     margin-top: -30px;
     background: darken(#fff, 1);
     border-color: darken(#fff, 8);
@@ -28,34 +30,29 @@ body {
     color: #054950;
 }
 
-#quiz_questions {
+#quiz_content {
     background-color: #fff;
     min-height: 200px;
-    padding: 25px 25px;
+    padding: 10px 25px 10px 25px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    .quiz-question {
-        font-family: 'Montserrat';
-    }
 }
 
 .quiz-button {
-    max-width: 250px;
-    min-width: 250px;
+    width: 250px;
     color: #789A9F;
     background-color: #edf4f5;
     border: 1px solid lighten(#789A9F, 20);
     border-radius: 3px;
-    margin: 1em;
     padding: 1em 2em;
     text-transform: uppercase;
-    font-family: 'Montserrat';
     transition: .08s;
     &:hover {
         background-color: #789A9F;
         color: #edf4f5;
     }
-    &:focus, &:active {
+    &:focus,
+    &:active {
         outline: none;
     }
 }
@@ -78,6 +75,10 @@ body {
     }
 }
 
+.quiz-button-all-in, .quiz-button-go-home {
+    width: 130px;
+}
+
 #quiz_block {
     display: none;
 }
@@ -97,6 +98,47 @@ body {
     background-color: darken(#FFF, 25);
 }
 
+#quiz_finish {
+    display: none;
+
+    p {
+        font-family: sans-serif;
+    }
+}
+
 .container {
     max-width: 720px;
+}
+
+.chart {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 110px;
+    font-size: 20px;
+}
+
+.chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.percent {
+    display: inline-block;
+    z-index: 2;
+}
+
+.percent:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-size: .8em;
+}
+
+.quiz-result-chart {
+    text-align: center;
 }

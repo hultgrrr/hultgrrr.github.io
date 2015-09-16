@@ -7,7 +7,6 @@
     <title>Quiz Engine</title>
     <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://code.createjs.com/soundjs-0.6.1.min.js"></script>
 </head>
 
 <body>
@@ -25,11 +24,29 @@
         <div id="quiz_timeline">
             <div id="quiz_done_timeline"></div>
         </div>
-
-        <div id="quiz_questions"></div>
+        <div id="quiz_content">
+            <div id="quiz_questions"></div>
+            <div id="quiz_finish">
+                <div class="row">
+                    <div class="col-sm-4 quiz-result-chart">
+                        <div class="chart" data-percent="0">
+                            <span>0%</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3>You are a beast!</h3>
+                        <p>INSANE</p>
+                        <button type="button" class="quiz-button quiz-button-all-in">ALL IN</button>
+                        <button type="button" class="quiz-button quiz-button-go-home">GO HOME</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="assets/jquery/dist/jquery.min.js"></script>
     <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/SoundJS/lib/soundjs-0.6.1.min.js"></script>
+    <script src="assets/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
     <script src="scripts/app.js"></script>
 </body>
 
