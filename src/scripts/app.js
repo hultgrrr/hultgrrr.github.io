@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var quiz = {};
+    quiz.processingAnswer = false;
     quiz.questions = [];
     quiz.atQuestion = 0;
     quiz.quizBlock = $('#quiz_block');
@@ -80,6 +81,12 @@ $(document).ready(function() {
     };
     quiz.checkAnswer = function (element) {
         // the element name holds the answerId
+        if (quiz.processingAnswer === true) {
+            console.log('Processing answer, please wait..');
+            return;
+        }
+
+        quiz.processingAnswer = true;
         var answerId = $(element).attr('name');
 
         if (quiz.questions[quiz.atQuestion-1].answers[answerId].isCorrect) {
@@ -92,6 +99,7 @@ $(document).ready(function() {
 
         setTimeout(function () {
             quiz.goToQuestion(++quiz.atQuestion);
+            quiz.processingAnswer = false;
         }, 1000);
     };
     quiz.finishQuiz = function () {

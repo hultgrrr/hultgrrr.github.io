@@ -2,11 +2,11 @@ Quiz Engine Hype
 ====================
 
 ## Todo
-- linje över hur långt man kommit grafiskt
 - fixa knapparna
 - fixa finish-procedur
 - github tutorial för att lägga till frågor
-- best practice css
+- all sounds
+- ignore spam on buttons
 - minify via gulp
 - sass
 - vendor.js hash ETc
