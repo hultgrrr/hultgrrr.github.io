@@ -72,16 +72,16 @@ $(document).ready(function() {
             }
         });
     };
-    quiz.setTimeline = function(end) {
-        end = end || false;
-        if (quiz.atQuestion == 1) {
+    quiz.setTimeline = function() {
+        if (quiz.atQuestion == 1 && quiz.firstTime) {
             return;
         }
 
         var calcWidth = ((quiz.atQuestion - 1) / quiz.questions.length) * 100;
+        $('#quiz_done_timeline').css('background-color', '#bfbfbf');
         $('#quiz_done_timeline').css('width', calcWidth + '%');
 
-        if (end) {
+        if (quiz.hasEnded) {
             $('#quiz_done_timeline').css('background-color', '#F78F1E');
         }
     };
@@ -125,8 +125,9 @@ $(document).ready(function() {
         quiz.updateChart((quiz.correctAnswers / quiz.questions.length) * 100);
         quiz.setFinishText((quiz.correctAnswers / quiz.questions.length) * 100);
 
-        $('#quiz_block_panel h4')[0].innerHTML = 'YOU ARE DONE';
-        quiz.setTimeline(end = true);
+        $('#quiz_block_panel h4')[0].innerHTML = 'THAT\'S ALL FOLKS';
+        quiz.hasEnded = true;
+        quiz.setTimeline();
         // hide
         $('#quiz_questions').hide();
         // show finish
@@ -162,11 +163,15 @@ $(document).ready(function() {
         quiz.quizBlock = $('#quiz_block');
         quiz.questionsBlock = $('#quiz_questions');
         quiz.correctAnswers = 0;
+        quiz.hasEnded = false;
+        quiz.firstTime = false;
+
 
         if (!reset) {
             quiz.loadQuestions();
             quiz.loadSounds();
             quiz.loadChart();
+            quiz.firstTime = true;
         }
 
     };
@@ -178,6 +183,7 @@ $(document).ready(function() {
         createjs.Sound.stop(4);
         quiz.resetButtonStates();
         quiz.goToQuestion(1);
+        quiz.setTimeline();
         $('#quiz_finish').hide();
         $('#quiz_questions').fadeIn();
     };
