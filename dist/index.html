@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>Quiz Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div id="quiz_header">
+        <h1>Quiz Engine</h1>
+        <br>
+        <div id="quiz_intro">
+            <p>Hello there and welcome to this fine quiz engine! <br>Don't even bother to try if you are not going all in.</p>
+            <button type="button" class="quiz-button" id="quiz_start">CALL TO ARMS</button>
+        </div>
+    </div>
+    <div class="container" id="quiz_block">
+        <div id="quiz_block_panel">
+            <h4></h4>
+        </div>
+        <div id="quiz_timeline">
+            <div id="quiz_done_timeline"></div>
+        </div>
+        <div id="quiz_content">
+            <div id="quiz_questions"></div>
+            <div id="quiz_finish">
+                <div class="row">
+                    <div class="col-sm-4 quiz-result-chart">
+                        <div class="chart" data-percent="0">
+                            <span>0%</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3>You are a beast!</h3>
+                        <p>INSANE</p>
+                        <button type="button" class="quiz-button quiz-button-all-in">ALL IN</button>
+                        <button type="button" class="quiz-button quiz-button-go-home">GO HOME</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bundle.min.js"></script>
+</body>
+
+</html>

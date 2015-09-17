@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "The name of the most popular web browser?",
+        "answers": [
+            {"id": 1, "text": "Chrome Canary"},
+            {"id": 2, "text": "IE7"},
+            {"id": 3, "text": "Google Chrome", "isCorrect": true},
+            {"id": 4, "text": "Netscape"}
+        ]
+    },
+    {
+        "id": 2,
+        "title": "The name of the next official ECMAScript version?",
+        "answers": [
+            {"id": 1, "text": "ES6", "isCorrect": true},
+            {"id": 2, "text": "IE6"},
+            {"id": 3, "text": "IE7"},
+            {"id": 4, "text": "IE8"}
+        ]
+    },
+    {
+        "id": 3,
+        "title": "The most known CSS preprocessor that isn't not LESS?",
+        "answers": [
+            {"id": 1, "text": "SASS"},
+            {"id": 2, "text": "LESS", "isCorrect": true},
+            {"id": 3, "text": "PHP"},
+            {"id": 4, "text": "GRUNT"}
+        ]
+    },
+    {
+        "id": 4,
+        "title": "What does 12 % 5 equal?",
+        "answers": [
+            {"id": 1, "text": "0"},
+            {"id": 2, "text": "2", "isCorrect": true},
+            {"id": 3, "text": "12"},
+            {"id": 4, "text": "5"}
+        ]
+    }
+]
