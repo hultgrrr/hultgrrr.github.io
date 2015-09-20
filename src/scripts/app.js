@@ -104,6 +104,7 @@ $(document).ready(function() {
         } else {
             createjs.Sound.play(3);
             $(element).find('.quiz-button').addClass('quiz-button-incorrect');
+            quiz.showCorrectAnswer();
             // different timeoutL so ound can play out
             timeoutL = 3000;
         }
@@ -112,6 +113,16 @@ $(document).ready(function() {
             quiz.goToQuestion(++quiz.atQuestion);
             quiz.processingAnswer = false;
         }, timeoutL);
+    };
+    quiz.showCorrectAnswer = function () {
+        // loop through answers
+        $.each(quiz.questions[quiz.atQuestion - 1].answers, function (idx, answer) {
+            if (answer.isCorrect) {
+                var buttonIdx = ((quiz.atQuestion-1) * 4) + (idx+1);
+                var elem = $('.quiz-button').get(buttonIdx);
+                $(elem).addClass('quiz-button-correct');
+            }
+        });
     };
     quiz.finishQuiz = function() {
         if (quiz.correctAnswers === 0) {
@@ -128,6 +139,7 @@ $(document).ready(function() {
         $('#quiz_block_panel h4')[0].innerHTML = 'THAT\'S ALL FOLKS';
         quiz.hasEnded = true;
         quiz.setTimeline();
+
         // hide
         $('#quiz_questions').hide();
         // show finish
@@ -148,7 +160,7 @@ $(document).ready(function() {
             $('#quiz_finish p')[0].innerHTML = 'You are the boss and you should be celebrating <strong>right now!</strong>';
         } else {
             $('#quiz_finish h3')[0].innerText = 'ZERO CORRECT ANSWERS IS ALSO AN ACHIEVEMENT ';
-            $('#quiz_finish p')[0].innerHTML = 'Please try again. It can\'t get any worse than this.';
+            $('#quiz_finish p')[0].innerHTML = 'Just try again. It can\'t get any worse than this.';
         }
 
     };
